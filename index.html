@@ -23,21 +23,28 @@
 
     <nav>
         <div class="container d-flex align-items-center justify-content-between">
-            <div class="logo">
+            <div class="logo" style="cursor: pointer;" onclick="reload()">
                 <img class="img-md" alt="The Christian Science Monitor Logo"
                     src="https://www.csmonitor.com/extension/csm_base/design/csm_design/images/csm-logo-200.svg">
             </div>
 
             <div class="nav-bar d-flex align-items-center">
                 <ul class="nav nav-tabs">
+
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Sports</a>
+                        <a class="nav-link active" id="all" onclick="onNavItemClicked('all')" aria-current="page"
+                            href="#">All</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" id="sports" onclick="onNavItemClicked('sports')" aria-current="page"
+                            href="#">Sports</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Finance</a>
+                        <a class="nav-link" id="finance" onclick="onNavItemClicked('finance')" href="#">Finance</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Politics</a>
+                        <a class="nav-link" id="politics" onclick="onNavItemClicked('politics')" href="#">Politics</a>
                     </li>
 
                 </ul>
@@ -45,8 +52,8 @@
 
             <div class="search-box d-flex">
                 <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    <input id="search-box" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button id="search-btn" class="btn btn-outline-success" type="submit">Search</button>
                 </form>
             </div>
         </div>
@@ -65,7 +72,7 @@
     <template id="news-card-template">
         <div class="col-lg-3 card mt-3 ">
             <img src="https://media.cnn.com/api/v1/images/stellar/prod/6e719878-4dcb-436b-a079-d2dc9e6eef4e.jpg?c=16x9&q=h_540,w_960,c_fill"
-                class="card-img-top news-img" alt="..." >
+                class="card-img-top news-img" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
                 <h6 class="new-source">BBC Fake 26/2/2024</h6>

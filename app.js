@@ -34,7 +34,32 @@ function filData(cardClone, article) {
     const date = new Date(article.publishedAt).toLocaleString("en-us", { timeZone: "Asia/Dhaka" })
     newsSource.innerHTML = `${article.source.name} . ${date}`
 
-    cardClone.firstElementChild.addEventListener('click', e=>{
-        window.open(article.url,'_blank')
+    cardClone.firstElementChild.addEventListener('click', e => {
+        window.open(article.url, '_blank')
     })
+}
+
+let currentSelectedNavItem = document.getElementById('all');
+
+function onNavItemClicked(id) {
+    fectNews(id)
+    const navItem = document.getElementById(id)
+    currentSelectedNavItem?.classList.remove('active')
+    currentSelectedNavItem = navItem
+    currentSelectedNavItem.classList.add('active')
+}
+
+let searchBox = document.getElementById('search-box')
+let searchBtn = document.getElementById('search-btn')
+
+searchBtn.addEventListener('click', e=>{
+    const query = searchBox.value
+    if(!query) return;
+    fectNews(query)
+    currentSelectedNavItem?.classList.remove('active')
+
+})
+
+function reload(){
+    window.location.reload()
 }
