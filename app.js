@@ -52,14 +52,41 @@ function onNavItemClicked(id) {
 let searchBox = document.getElementById('search-box')
 let searchBtn = document.getElementById('search-btn')
 
-searchBtn.addEventListener('click', e=>{
+searchBtn.addEventListener('click', e => {
     const query = searchBox.value
-    if(!query) return;
+    if (!query) return;
     fectNews(query)
     currentSelectedNavItem?.classList.remove('active')
 
 })
 
-function reload(){
+function reload() {
     window.location.reload()
 }
+
+
+// Assuming your HTML structure has elements with classes 'ham-bar' and 'nav-bar'
+
+function hamburger() {
+    const hamBar = document.querySelector('.ham-bar'); // Get the element
+    if (hamBar) { // Check if it exists
+        hamBar.addEventListener("click", (event) => {
+            document.querySelector(".nav-bar").style.left = '1px'; // Set the left style
+        });
+    } else {
+        console.error("Element with class '.ham-bar' not found"); // Handle missing element
+    }
+    const xBar = document.querySelector('.x-bar'); // Get the element
+    if (xBar) { // Check if it exists
+        xBar.addEventListener("click", (event) => {
+            document.querySelector(".nav-bar").style.left = '-1021px'; // Set the left style
+        });
+    } else {
+        console.error("Element with class '.ham-bar' not found"); // Handle missing element
+    }
+
+
+}
+
+hamburger(); // Call the function to attach the event listener
+

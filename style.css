@@ -18,13 +18,13 @@ body {
   color: var(--primary-text-color);
   font-family: "Poppins", sans-serif;
 }
-p{
-    color: var(--secondary-text-color);
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.4rem;
+p {
+  color: var(--secondary-text-color);
+  font-family: "Roboto", sans-serif;
+  line-height: 1.4rem;
 }
 
-nav{
+nav {
   background-color: #f3faff;
   box-shadow: 0 0 4px #bbd0e2;
   position: fixed;
@@ -34,25 +34,31 @@ nav{
   z-index: 99;
   /* padding-block: 8px; */
 }
-.logo img{
+.logo img {
   height: 2.7rem;
 }
+.ham-bar,.x-bar {
+  display: none;
+}
 
-main{
+main {
   margin-top: 80px;
 }
 
-.card{
+.card {
   cursor: pointer;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
-.card:hover{
-background-color: #f9fdff;
-transform: translateY(-2px);
+.card:hover {
+  background-color: #f9fdff;
+  transform: translateY(-2px);
   box-shadow: 1px 1px 8px #d4ecff;
 }
 
-.new-source{
-  margin-block:12px;
+.new-source {
+  margin-block: 12px;
   font-size: 12px;
 }
+
+
+

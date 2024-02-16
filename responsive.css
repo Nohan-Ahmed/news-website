@@ -1,0 +1,64 @@
+
+@media (max-width: 575.98px) { 
+    .logo img{
+        height: 2.4rem;
+    }
+}
+
+/*  `md` applies to small devices (landscape phones, less than 768px) */
+@media (max-width: 991.98px) {
+    .nav-container {
+      flex-direction: column;
+      justify-content: start;
+      position: relative;
+    }
+    .logo {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .ham-bar,.x-bar {
+      display: inline-block;
+      font-size: 2rem;
+    }
+  
+    .x-bar{
+      color: black;
+      position: absolute;
+      right: -5px;
+      top: -35px;
+    }
+    .nav-bar {
+      background: black;
+      width: 50vw;
+      /* height: 40vw; */
+      padding: 10px 10px 0 0;
+      position: absolute;
+      left: -1201px;
+      top: 50px;
+      flex-direction: column;
+      align-items: baseline !important;
+      justify-content: left !important;
+    }
+    .nav-tabs {
+      flex-direction: column;
+    }
+    .active {
+      width: 50vw;
+    }
+  .search-box{
+    /* margin-left: 1rem; */
+  }
+    .search-box form {
+      margin-top: 1rem;
+      flex-direction: column;
+      gap: 5px;
+      justify-content: center;
+    }
+    #search-box{
+      width: 100%;
+    }
+  }
+  
+  
